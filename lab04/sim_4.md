@@ -4,7 +4,7 @@ $M = 2^63$
 
 $\beta = x_0^* = 2^32 + 3$
 
-$x_i^* == (\beta x_{i-1}^*) mod M$
+$x_i^* = (\beta x_{i-1}^*) mod M$
 
 $x_i = \frac{x_i^*}{M}$
 
