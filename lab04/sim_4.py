@@ -8,12 +8,11 @@ a = 2**32 + 3
 N = 10 ** 5
 
 my_data = []
-my_data.append(x0/m)
 library_data = np.random.uniform(0.0, 1, N)
-M1 = x0/m
-M2 = library_data[N-1]
+M1 = x0
+M2 = 0
 
-for i in range(N-1):
+for i in range(N):
     x0 = (x0 * a) % m
     my_data.append(x0/m)
     M1 += x0/m
