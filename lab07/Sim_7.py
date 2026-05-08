@@ -82,7 +82,6 @@ class WeatherSimulationGUI:
             messagebox.showerror("Ошибка", "Введите корректные числа")
             return
 
-        # --- Предварительный расчет (ОДИН РАЗ) ---
         stationary_theory = self.get_stationary_dist(Q)
         
         # Матрица вероятностей прыжков (диагонали 0)
@@ -94,7 +93,8 @@ class WeatherSimulationGUI:
 
         # --- Инициализация симуляции ---
         t = 0
-        current_state = 0
+        ans = list(stationary_theory)
+        current_state = ans.index(max(ans))
         stat_time = [0.0, 0.0, 0.0]
         history = [] # Для CSV
 
